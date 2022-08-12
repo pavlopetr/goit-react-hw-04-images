@@ -61,10 +61,11 @@ export function App() {
       </ImageGallery>
       {status === 'loading' && <Loader />}
       {totalPage > page && <Button handlBtnlick={handlBtnlick} />}
-      {status === 'error' && <p style={{ textAlign: 'center' }}>{error.message}</p>}
+      {status === 'error' && (
+        <p style={{ textAlign: 'center' }}>{error.message}</p>
+      )}
 
       {modalStart && <Modal modalData={modalData} toggleModal={toggleModal} />}
     </div>
   );
-};
-
+}
